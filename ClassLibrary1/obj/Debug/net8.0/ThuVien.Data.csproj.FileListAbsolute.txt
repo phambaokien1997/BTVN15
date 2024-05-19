@@ -1,0 +1,13 @@
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\bin\Debug\net8.0\ThuVien.Data.deps.json
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\bin\Debug\net8.0\ThuVien.Data.dll
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\bin\Debug\net8.0\ThuVien.Data.pdb
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.csproj.AssemblyReference.cache
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.AssemblyInfoInputs.cache
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.AssemblyInfo.cs
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.csproj.CoreCompileInputs.cache
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.sourcelink.json
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.dll
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\refint\ThuVien.Data.dll
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ThuVien.Data.pdb
+D:\BE\B-I-T-P-V-NH-C-C-BU-I\QuanLyThuVienBTVN13\ClassLibrary1\obj\Debug\net8.0\ref\ThuVien.Data.dll

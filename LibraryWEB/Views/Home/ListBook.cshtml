@@ -1,0 +1,24 @@
+﻿@* @model ListBookModel
+@{
+	ViewData["Title"] = "PRO";
+}
+
+
+@if (string.IsNullOrEmpty(Model.Director))
+{
+	<p>
+		@Model.BookStoreOwner
+	</p>
+}
+else
+{
+	<p>@Model.Director</p>
+}
+@foreach (var book in Model.Books)
+{
+	<p>@book.Title</p>
+	<p>@book.Author</p>
+	<p>@book.BookID</p>
+} *@
+
+
