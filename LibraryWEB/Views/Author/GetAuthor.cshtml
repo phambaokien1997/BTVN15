@@ -1,0 +1,11 @@
+﻿@model ListAuthorModel
+@{
+}
+
+<h1>Tác Giả:</h1>
+@foreach (var item in Model.Authors)
+{
+    <p>Tên: @item.Name</p>
+    <p>Quê: @item.Country</p>
+    <hr />
+}
