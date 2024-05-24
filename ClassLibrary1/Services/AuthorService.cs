@@ -1,22 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ThuVien.Data.Dto;
 using ThuVien.Data.Interface;
 using ThuVien.Data.Models;
 
 namespace ThuVien.Data.Services
 {
-    public class IAuthorService : LibraryService , IAuthor
+    public class AuthorService : LibraryService , IAuthorService
     {
-        public async Task<List<Authors>> GetAuthorsAsync(string name, string? country)
+        public async Task<List<Authors>> GetAuthorsAsync(GetAuthorInput input)
         {
-            var authorsQuery = _context.Authors.Where(a => a.AName == name);
-            if (!string.IsNullOrWhiteSpace(country))
+            var authorsQuery = _context.Authors.AsQueryable(); 
+            if (!string.IsNullOrWhiteSpace(input.Name))
             {
-                authorsQuery = authorsQuery.Where(a => a.Country == country);
+                authorsQuery = authorsQuery.Where(a => a.AName == input.Name);
+            }
+            if (!string.IsNullOrWhiteSpace(input.Country))
+            {
+                authorsQuery = authorsQuery.Where(a => a.Country == input.Country);
             }
             var authors = await authorsQuery
             //.Select(x => new AuthorMini
@@ -25,10 +25,6 @@ namespace ThuVien.Data.Services
             //    QueQuan = x.Country
             //})
                 .ToListAsync();
-
-            var author = _context.Authors.FirstOrDefault(a => a.AName == name);
-            author.AName = "HỒ Béo";
-            _context.Authors.Update(author);
 
             //_context.Authors.Remove(author);
             _context.SaveChanges();

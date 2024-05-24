@@ -14,27 +14,20 @@ namespace LibraryWEB.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAuthor()
         {
-            var authors = await _authorService.GetAuthorsAsync();
+            var input = new ThuVien.Data.Dto.GetAuthorInput
+            {
+
+            };
+            var authors = await _authorService.GetAuthorsAsync(input);
 
             var viewModel = new ListAuthorModel();
-            //viewModel.Authors = authors
-            //    .Select(x => new AuthorModel
-            //    {
-            //        Name = x.AName,
-            //        Country = x.Country,
-            //        Id = x.ID
-            //    }).ToList();
-
-            viewModel.Authors = new List<AuthorModel>();
-            foreach (var x in authors)
-            {
-                viewModel.Authors.Add(new AuthorModel
+            viewModel.Authors = authors
+                .Select(x => new AuthorModel
                 {
                     Name = x.AName,
                     Country = x.Country,
                     Id = x.ID
-                });
-            }
+                }).ToList();
 
             return View(viewModel);
         }

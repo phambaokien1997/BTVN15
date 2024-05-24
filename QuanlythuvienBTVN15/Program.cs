@@ -23,7 +23,7 @@ namespace MyLibraryApp
             //var country = Console.ReadLine();
 
             //// Khởi tạo một đối tượng LibraryService
-            IAuthor asd = new IAuthorService();
+            IAuthorService asd = new AuthorService();
 
             //// Gọi phương thức AddAuthor để thêm tác giả vào cơ sở dữ liệu
             //var result = libraryService.AddAuthorAsync(id, aName, country);
@@ -40,20 +40,20 @@ namespace MyLibraryApp
             string? tenTacGia = Console.ReadLine();
             await Console.Out.WriteLineAsync("Mời bạn nhập quê quán: ");
             string? queQuan = Console.ReadLine();
-            var layTacGia = asd.GetAuthorsAsync(tenTacGia, queQuan);
-            var authors = await layTacGia;
-            var count = authors.Count();
-            if(count == 0)
-            {
-                await Console.Out.WriteLineAsync("Đéo có thằng tác giả nào ở đây cả!!");
-            }    
-            foreach (var tacgia in authors)
-            {
-                Console.WriteLine(tacgia);
-            }
+            //var layTacGia = asd.GetAuthorsAsync(tenTacGia, queQuan);
+            //var authors = await layTacGia;
+            //var count = authors.Count();
+            //if(count == 0)
+            //{
+            //    await Console.Out.WriteLineAsync("Đéo có thằng tác giả nào ở đây cả!!");
+            //}    
+            //foreach (var tacgia in authors)
+            //{
+            //    Console.WriteLine(tacgia);
+            //}
 
-            IBook bookService = new BookService();
-            bookService.Get_BookAsync("Lam di");
+            //IBook bookService = new BookService();
+            //bookService.Get_BookAsync("Lam di");
             
             
             

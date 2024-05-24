@@ -17,7 +17,6 @@ namespace ThuVien.Data.Models
         public DbSet<OrderDetails> OrderDetails { get; set; }
         public DbSet<Orders> Orders { get; set; }
         public DbSet<Customers> Customers { get; set; }
-        public DbSet<CombinedDataBook_Author> CombinedDataBook_Author { get; set; }
         public AppDbContext(DbContextOptions options) : base(options) 
         { 
         }
@@ -30,7 +29,9 @@ namespace ThuVien.Data.Models
             {
                 // Thiết lập chuỗi kết nối đến cơ sở dữ liệu SQL Server
                 //BKS - 20240209BOY (trên lap)
-                string connectionString = "Server=DESKTOP-4QUI8GB;Database=BTVN13;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
+                //B
+
+                string connectionString = "Server=localhost,1433;Database=KienGa;User Id=sa;Password=Strong!Passw0rd;TrustServerCertificate=True;";
                 // Sử dụng SQL Server làm cơ sở dữ liệu
                 optionsBuilder.UseSqlServer(connectionString);
             }
