@@ -12,7 +12,7 @@ namespace LibraryWEB.Controllers
             _authorService = new AuthorService();
         }
         [HttpGet]
-        public async Task<IActionResult> GetAuthor()
+        public async Task<IActionResult> GetAuthor(string name, string country)
         {
             var input = new ThuVien.Data.Dto.GetAuthorInput
             {
@@ -39,19 +39,17 @@ namespace LibraryWEB.Controllers
         [HttpPost]
         public async Task<IActionResult> PostAddAuthor(AddAuthorModel addAuthorModel)
         {
-            var authors = await _authorService.AddAuthorAsync("", "", "");
-            //var authorService = new AuthorService();
-            //var authors = await authorService.GetAuthorsAsync(null, null);
-
-            //var viewModel = new ListAuthorModel();
-            //viewModel.Authors = authors.Select(x => new AuthorModel
-            //{
-            //    Name = x.AName,
-            //    Country = x.Country,
-            //    Id = x.ID
-            //}).ToList();
-
-            return View();
+            try
+            {
+                var id = Guid.NewGuid().ToString().Substring(0, 10);
+                var message = await _authorService.AddAuthorAsync(id.ToString(), addAuthorModel.Ten, addAuthorModel.QueQuan);
+                addAuthorModel.ThongBao = message;
+                return View("AddAuthor", addAuthorModel);
+            }
+            catch (Exception ex)
+            {
+                return View();
+            }
         }
     }
 }

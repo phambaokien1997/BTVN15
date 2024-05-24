@@ -47,8 +47,6 @@ namespace ThuVien.Data.Services
 
             await _context.Authors.AddAsync(author);
             await _context.SaveChangesAsync();
-            UpdateAuthorAsync("124", "asd", "asd");
-            DeleteAuthorAsync("id");
             return "THEM THANH CONG TAC GIA ROI";
             
         }
